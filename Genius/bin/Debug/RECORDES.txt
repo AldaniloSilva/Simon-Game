@@ -1,0 +1,10 @@
+F|Alipio|55,8
+F|Alipio|63,4
+F|Alipio|38,1
+F|Alipio|37,3
+F|Alipio|64,6
+F|Alípio|65,3
+F|Alípio|55,1
+F|Alípio|62,4
+F|Alípio|55,3
+F|Bruno de Sousa|75,3

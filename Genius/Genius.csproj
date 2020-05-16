@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB133A42-4F10-4A0E-9B99-4E18AA60BD23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Genius</RootNamespace>
+    <AssemblyName>Genius</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>.\Interop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frAjuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frAjuda.Designer.cs">
+      <DependentUpon>frAjuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frCadastro.Designer.cs">
+      <DependentUpon>frCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frConfiguracao.Designer.cs">
+      <DependentUpon>frConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frJogo.Designer.cs">
+      <DependentUpon>frJogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frMenu.Designer.cs">
+      <DependentUpon>frMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frRecordes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frRecordes.Designer.cs">
+      <DependentUpon>frRecordes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frSobre.Designer.cs">
+      <DependentUpon>frSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrocaDados.cs" />
+    <EmbeddedResource Include="frAjuda.resx">
+      <DependentUpon>frAjuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frCadastro.resx">
+      <DependentUpon>frCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frConfiguracao.resx">
+      <DependentUpon>frConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frJogo.resx">
+      <DependentUpon>frJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frMenu.resx">
+      <DependentUpon>frMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRecordes.resx">
+      <DependentUpon>frRecordes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frSobre.resx">
+      <DependentUpon>frSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesa_no_centro_form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_final.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jogar_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobre.off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recordes_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recordes_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobre_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jogar_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagesSI2QM19M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_transparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prancheta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smaller_Clipboard_Front__1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_PNG5890.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blackboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trofeu-imagem-animada-0001.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela_Sobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela_Sobre1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\versao_jogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo_versão.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mario.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo_mario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parabéns.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passo8.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
